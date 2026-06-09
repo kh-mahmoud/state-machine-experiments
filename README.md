@@ -1,75 +1,42 @@
-# React + TypeScript + Vite
+# User Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application for managing users with TypeScript, XState state management, and Tailwind CSS styling.
 
-Currently, two official plugins are available:
+## What This Project Does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This application demonstrates user management features including:
+- User creation through a form interface
+- User listing with real-time state updates
+- User deletion with loading states
+- XState machine for managing application state
+- Tailwind CSS for responsive styling
 
-## React Compiler
+## Getting Started
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Quick Start
+```bash
+npm install    # Install dependencies (if needed)
+npm run dev    # Start development server at http://localhost:5173
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development Commands
+```bash
+npm run build  # Build for production
+npm run lint   # Run ESLint to check code quality
+npm run preview # Preview production build locally
+```
+## Technologies Used
+- **React** - Frontend framework for UI
+- **TypeScript** - Type safety and better code quality
+- **Vite** - Fast build tool with HMR support
+- **XState** - State management via finite state machines
+- **Tailwind CSS** - Utility-first CSS framework
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Ressources:
+- https://asoasis.tech/articles/2026-04-22-1453-react-state-machines-xstate-tutorial
+- https://www.typeonce.dev/course/xstate-complete-getting-started-guide/introduction-and-conventions/why-learning-xstate
+- https://stately.ai/docs
+  
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+    
 ```
